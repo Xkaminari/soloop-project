@@ -47,8 +47,12 @@
     .teaser-video-container {
         width: 130%;
     }
-
-    ..discover-boutique-btn-link {
+    
+    .discover-boutique-btn-link {
         bottom: 130px;
+    }
+    
+    .teaser-video {
+        width: 100%;
     }
 }
