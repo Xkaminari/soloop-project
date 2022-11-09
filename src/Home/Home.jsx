@@ -30,12 +30,12 @@ export default class Home extends Component {
             <img className='soloopMainLogo' src={SoloopLogo} alt="Soloop's Logo" />
             <div className='Slogan'>
                 <p>Les meilleurs rollers</p>
-                <p>pour faire votre art.</p>
+                <p>pour faire parler art.</p>
             </div>
         </section>
         <section className='Home-section3'>
             <div className='teaser-video-container'>
-                <video width="100%" className='teaser-video' src={TeaserBoutiqueVideo} autoPlay muted onEnded={this.displayBtn.bind(this)}></video>
+                <video className='teaser-video' src={TeaserBoutiqueVideo} autoPlay muted onEnded={this.displayBtn.bind(this)}></video>
                 <Link className='discover-boutique-btn-link'><button className='discover-boutique-btn'>Discover</button></Link>
             </div>
         </section>
