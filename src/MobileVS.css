@@ -1,0 +1,54 @@
+@media screen and (max-width: 480px) {
+    #root {
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .circle {
+        display: none;
+    }
+    
+    .Home-start {
+        display: block;
+    }
+    .start-video {
+        display: none;
+    }
+    
+    .start-video-Mobile {
+        display: block;
+    }
+    
+    .soloopLogoVideo {
+        display: none;
+    }
+    
+    .Boutique-link {
+        font-size: 2em;
+        text-shadow: 2px 2px 7px #000000;
+        position: absolute;
+        right: 0px;
+        margin: 10px 10px 0 0;
+    }
+    
+    .Gradiant-div {
+        bottom: -1px;
+    }
+    
+    .Home-section2 {
+        height: 50vh;
+        padding-top: 200px;
+    }
+    
+    .Home-section3 {
+        height: 80vh;
+    }
+    
+    .teaser-video-container {
+        width: 130%;
+    }
+
+    ..discover-boutique-btn-link {
+        bottom: 130px;
+    }
+}

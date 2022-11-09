@@ -20,6 +20,7 @@ body {
 	width : 100%;  
 	margin: 0;
   background-color: var(--black);
+  overflow-x: hidden;
 }
 
 .circle {
@@ -29,6 +30,8 @@ body {
 	height: 60px; 
   border-radius: 50%;
   z-index: 3;
+  background: #ffffff33;
+  /* filter: invert(100%) */
 }
 
 /* Home page */
@@ -69,6 +72,10 @@ body {
   overflow: hidden;
   grid-row: 1 / span 3;
   grid-column: 1 / span 2;
+}
+
+.start-video-Mobile {
+  display: none;
 }
 
 .Gradiant-div {

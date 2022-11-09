@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import homeBgVideo from '../Media/homeBgVideo.mp4'
 import SoloopLogo from '../Media/Soloop-Logo.png'
-import TeaserBoutiqueVideo from '../Media/TeaserBoutique.mp4' 
+import TeaserBoutiqueVideo from '../Media/TeaserBoutique.mp4'
+import TeaserBoutiqueVideoMobile from '../Media/soloopMainVideoMobilVS.mp4.mp4'
 
 export default class Home extends Component {
     displayBtn() {
@@ -12,35 +13,16 @@ export default class Home extends Component {
             discoverBtn.style.opacity = "1";
         }, 100)
     }
-    followingCercle() {
-        let circle = document.getElementById('circle');
-        let mouseX = 0, mouseY = 0;
-        var xp = 0, yp = 0;
-        
-        document.onmousemove = function(e)
-        {
-        mouseX = e.pageX - 30;
-        console.log(mouseX);
-        mouseY = e.pageY - 30; 
-        console.log(mouseY);
-        
-        setInterval(function(){
-            xp += ((mouseX - xp)/6);
-            yp += ((mouseY - yp)/6);
-            circle.style.top = yp + "px";
-            circle.style.left = xp + "px";
-        }, 20);
-        };
-    }
     
     render() {
         return <>
         <span id="circle" className="circle"></span>
-        <section className='Home-start' onMouseMove={this.followingCercle.bind(this)}>
+        <section className='Home-start'>
             <img className='soloopLogoVideo' src={SoloopLogo} alt="Soloop's Logo" />
             <Link className='Boutique-link'>Boutique</Link>
             <div className='start-video-container'>
                 <video className='start-video' width="100%" autoPlay muted loop src={homeBgVideo}></video>
+                <video className='start-video-Mobile' width="100%" autoPlay muted loop src={TeaserBoutiqueVideoMobile}></video>
             </div>
             <div className='Gradiant-div'></div>
         </section>
@@ -53,7 +35,7 @@ export default class Home extends Component {
         </section>
         <section className='Home-section3'>
             <div className='teaser-video-container'>
-                <video className='teaser-video' src={TeaserBoutiqueVideo} autoPlay muted onEnded={this.displayBtn.bind(this)}></video>
+                <video width="100%" className='teaser-video' src={TeaserBoutiqueVideo} autoPlay muted onEnded={this.displayBtn.bind(this)}></video>
                 <Link className='discover-boutique-btn-link'><button className='discover-boutique-btn'>Discover</button></Link>
             </div>
         </section>

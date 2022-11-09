@@ -13,5 +13,24 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+        let circle = document.querySelector('#circle');
+            mouseX = 0
+            mouseY = 0;
+            xp = 0
+            yp = 0;
+        
+        console.log(circle);
+        document.onmousemove = function(e)
+        {
+        let circle = document.querySelector('#circle');
+        mouseX = e.pageX - 30;
+        mouseY = e.pageY - 30; 
+        xp += ((mouseX - xp)/6);
+        yp += ((mouseY - yp)/6);
+        circle.style.top = yp + "px";
+        circle.style.left = xp + "px";
+        };
+    </script>
   </body>
 </html>
