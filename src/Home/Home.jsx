@@ -12,10 +12,31 @@ export default class Home extends Component {
             discoverBtn.style.opacity = "1";
         }, 100)
     }
+    followingCercle() {
+        let circle = document.getElementById('circle');
+        let mouseX = 0, mouseY = 0;
+        var xp = 0, yp = 0;
+        
+        document.onmousemove = function(e)
+        {
+        mouseX = e.pageX - 30;
+        console.log(mouseX);
+        mouseY = e.pageY - 30; 
+        console.log(mouseY);
+        
+        setInterval(function(){
+            xp += ((mouseX - xp)/6);
+            yp += ((mouseY - yp)/6);
+            circle.style.top = yp + "px";
+            circle.style.left = xp + "px";
+        }, 20);
+        };
+    }
     
     render() {
         return <>
-        <section className='Home-start'>
+        <span id="circle" className="circle"></span>
+        <section className='Home-start' onMouseMove={this.followingCercle.bind(this)}>
             <img className='soloopLogoVideo' src={SoloopLogo} alt="Soloop's Logo" />
             <Link className='Boutique-link'>Boutique</Link>
             <div className='start-video-container'>

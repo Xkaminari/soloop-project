@@ -1,0 +1,33 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./Home/Home";
+
+function App() {
+  followingCercle() {
+    document.ready(function() {
+    
+      let mouseX = 0, mouseY = 0;
+      let xp = 0, yp = 0;
+      
+      document.mousemove(function(e){
+        mouseX = e.pageX - 30;
+        mouseY = e.pageY - 30; 
+      });
+        
+      setInterval(function(){
+        xp += ((mouseX - xp)/6);
+        yp += ((mouseY - yp)/6);
+        document.getElementById("circle").css({left: xp +'px', top: yp +'px'});
+      }, 20);
+    
+    });
+  }
+  
+  return <>
+    <span id="circle" class="circle"></span>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+    </Routes>
+  </>;
+}
+
+export default App;
