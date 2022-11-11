@@ -1,1 +1,5 @@
 -gradiant reponsive !!!
+_loging page
+_cart page
+_link to about section
+_footer ***************************

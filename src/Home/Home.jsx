@@ -4,6 +4,8 @@ import homeBgVideo from '../Media/homeBgVideo.mp4'
 import SoloopLogo from '../Media/Soloop-Logo.png'
 import TeaserBoutiqueVideo from '../Media/TeaserBoutique.mp4'
 import TeaserBoutiqueVideoMobile from '../Media/soloopMainVideoMobilVS.mp4.mp4'
+import Boutique from '../Boutique/Boutique'
+import Footer from '../Footer/Footer'
 
 export default class Home extends Component {
     displayBtn() {
@@ -19,7 +21,7 @@ export default class Home extends Component {
         <span id="circle" className="circle"></span>
         <section className='Home-start'>
             <img className='soloopLogoVideo' src={SoloopLogo} alt="Soloop's Logo" />
-            <Link className='Boutique-link'>Boutique</Link>
+            <Link to="Boutique" className='Boutique-link'>Boutique</Link>
             <div className='start-video-container'>
                 <video className='start-video' width="100%" autoPlay muted loop src={homeBgVideo}></video>
                 <video className='start-video-Mobile' width="100%" autoPlay muted loop src={TeaserBoutiqueVideoMobile}></video>
@@ -39,6 +41,7 @@ export default class Home extends Component {
                 <Link className='discover-boutique-btn-link'><button className='discover-boutique-btn'>Discover</button></Link>
             </div>
         </section>
+        <Footer/>
         </>
     }
 }

@@ -3,14 +3,15 @@
 :root {
   --black: #010001;
   --white: #f5f5f5;
+  --gold: #DDAF60;
 }
 
 * {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: 'Julius Sans One', sans-serif;
-  color: var(--white);
+  /* font-family: 'Julius Sans One', sans-serif; */
+  /* color: var(--white); */
 }
 
 body {
@@ -30,7 +31,6 @@ body {
   border-radius: 50%;
   z-index: 3;
   background: #ffffff33;
-  /* filter: invert(100%) */
 }
 
 /* Home page */
@@ -55,6 +55,8 @@ body {
 }
 
 .Boutique-link {
+  color: var(--white);
+  font-family: 'Julius Sans One', sans-serif;
   text-decoration: underline;
   text-align: right;
   margin: 25px 25px 0px 0px ;
@@ -103,6 +105,8 @@ body {
 }
 
 .Slogan {
+  color: var(--white);
+  font-family: 'Julius Sans One', sans-serif;
   text-align: center;
   margin: 20px;
   font-size: 2em;
@@ -131,6 +135,8 @@ body {
 }
 
 .discover-boutique-btn-link {
+  font-family: 'Julius Sans One', sans-serif;
+  color: var(--white);
   z-index: 3;
   position: absolute;
   bottom: 100px;
@@ -140,7 +146,7 @@ body {
   display: none;
   opacity: 0;
   border: none;
-  background-color: #DDAF60;
+  background-color: var(--gold);
   padding: 10px;
   font-size: 2em;
   border-radius: 5px;

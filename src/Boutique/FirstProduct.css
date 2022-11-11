@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Julius+Sans+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title-b {
+    font-size: 1.5em;
+    font-family: 'Julius Sans One', sans-serif;
+    margin: 20px 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FAFAFA;
+}
+
+.prdct-img img {
+    width: 550px;
+    border: 1px solid ;
+}
+
+.details-sec {
+    font-family: 'Jost', sans-serif;
+    width: 500px;
+    position: relative;
+    top: 100px;
+}
+.prdctname {
+    font-size: 2em;
+    font-weight: 500;
+}
+.price {
+    font-size: 1.5em;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+hr {
+    width: 100%;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    letter-spacing: 3px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+.desc {
+    opacity: .8;
+    
+}
+ul {
+    list-style-type: none;
+    margin-top: 30px;
+}
+.pop-flex {
+    display: flex;
+    padding: 20px 0;
+}
+.pop-title{
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    opacity: .7;
+}
+.pop-img {
+    width: 50px;
+    padding-right: 10px;
+}
+.pop-name {
+    font-family: 'Jost', sans-serif;
+    opacity: .9;
+}
+.pop-price {
+    font-family: 'Jost', sans-serif;
+    opacity: .6;
+}
+.pop-available {
+    font-family: 'Jost', sans-serif;
+    opacity: .6;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.total small {
+    font-style: italic;
+    font-size: .6em;
+    margin-top: 5px;
+}
+.tot-price {
+    font-size: 1.3em;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 3px;
+    opacity: .7;
+}
+
+
+@media all and (max-width: 500px) {
+    .flex {
+        display: block;
+    }
+    .title-b {
+        font-size: 1.5em;
+        font-family: 'Julius Sans One', sans-serif;
+        text-align: center;
+    }
+    .prdct-img img {
+        width: 400px;
+        position: relative;
+        left: 45px;
+    }
+    .details-sec {
+        font-family: 'Jost', sans-serif;
+        width: 400px;
+        left: 45px;
+    }
+}
