@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --black: #010001;
+    --white: #f5f5f5;
+}
+
+.dashBoard-container {
+    display: flex;
+    background-color: var(--black);
+    border-radius: 50px;
+}
+
+.Side-menue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 100px;
+    width: 15vw;
+    height: 100vh;
+    background-color: #00000000;
+}
+
+.DashBoard-Soloop-Logo {
+    width: 200px;
+    filter: brightness(10);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-profile-pick {
+    border: 2px solid var(--white);
+    padding: 3px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    width: 100px;
+}
+
+.userName {
+    font-family: 'Dosis', sans-serif ;
+    font-weight: 700;
+    font-size: 1.2em; 
+    margin-bottom: 5px;
+}
+
+.user-statut {
+    color: rgba(128, 128, 128, 0.849);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.nav-list li {
+    font-size: 1.3em;
+    padding: 10px 10px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.nav-list li:hover {
+    background-color: rgba(78, 78, 78, 0.295);
+    cursor: pointer;
+}
+
+.fa-solid {
+    width: 26px;
+    margin: 0 5px 0 0;
+}
+
+.Exite-btn {
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.Exite-btn:hover {
+    background-color: rgba(78, 78, 78, 0.295);
+}
+
+.DashBoard-containt {
+    width: 85vw;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+}
+/* -----------------------------------------User Info----------------------------------------- */
+.all-users-info {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.AUser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--black);
+}
+
+.user-informations {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    margin: 0 30px 0 0;
+    border: 2px solid var(--black);
+    padding: 1.5px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.AUser p {
+    color: var(--black);
+    font-family: 'Dosis', sans-serif ;
+    font-size: 1.5em;
+}
+
+/* ----------------------------------------Add Product---------------------------------------- */
+
+.add-new-product {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: var(--black);
+}
+
+.img-fild {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+label[for="product-img"] {
+    margin: 0 0 50px 90px;
+    text-align: left;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+input[type="file"] {
+    background: url(../Media/XD2000.jpg);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 70px;
+    display: flex;
+    border: none;
+    content: "";
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    transition: 0.5s ease;
+}
+
+input[type="file"]:hover {
+    filter: blur(5px);
+}
+
+.hover-text {
+    color: rgba(0, 0, 0, 0.507);
+    position: absolute;
+    left: 37%;
+    top: 50%;
+    font-weight: 500;
+    font-size: 1.8em;
+    visibility: hidden;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    display: none;
+}
+
+.Product-details-filds {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* row-gap: 30px; */
+}
+
+.fild {
+    width: 80%;
+    height: 23.33%;
+}
+
+.fild label {
+    font-weight: 700;
+    display: block;
+    margin: 20px 0 40px 0;
+}
+
+.fild input {
+    width: 600px;
+    height: 80px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid var(--black);
+}
+
+textarea {
+    resize: none;
+    width: 570px;
+    height: 70%;
+    padding: 15px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid var(--black);
+}
+
+.edite-products {
+    display: none;
+}
