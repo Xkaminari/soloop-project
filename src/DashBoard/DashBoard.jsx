@@ -5,6 +5,35 @@ import ProfilPick from '../Media/Profil-pick.jpg'
 import '../DashBoard/DashBoard.css'
 
 export default class DashBoard extends Component {
+    
+    diplayUserInfo() {
+        let userInfo = document.querySelector('.all-users-info');
+        let addNewProduct = document.querySelector('.add-new-product');
+        let poductsList = document.querySelector('.poducts-list');
+        userInfo.style.display = "flex";
+        addNewProduct.style.display = "none";
+        poductsList.style.display = "none";
+    }
+    
+    diplayAddNewProduct() {
+        let userInfo = document.querySelector('.all-users-info');
+        let addNewProduct = document.querySelector('.add-new-product');
+        let poductsList = document.querySelector('.poducts-list');
+        userInfo.style.display = "none";
+        addNewProduct.style.display = "flex";
+        poductsList.style.display = "none";
+    } 
+    
+    diplayPoductsList() {
+        let userInfo = document.querySelector('.all-users-info');
+        let addNewProduct = document.querySelector('.add-new-product');
+        let poductsList = document.querySelector('.poducts-list');
+        userInfo.style.display = "none";
+        addNewProduct.style.display = "none";
+        poductsList.style.display = "grid";
+    }
+    
+    // Hover effect text for the creat product part
     displayText() {
         let hoverText = document.querySelector('.hover-text');
         setTimeout(() => {
@@ -18,7 +47,7 @@ export default class DashBoard extends Component {
         let hoverText = document.querySelector('.hover-text');
         hoverText.style.visibility = "hidden";
     }
-    
+        // ----------------------------------------
     render() {
         return <div className='dashBoard-container'>
             <div className='Side-menue'>
@@ -31,9 +60,9 @@ export default class DashBoard extends Component {
                 </div>
                 <nav>
                     <ul className='nav-list'>
-                        <li><i class="fa-solid fa-users"></i>User's info</li>
-                        <li><i class="fa-solid fa-plus"></i>New product</li>
-                        <li><i class="fa-solid fa-pen-to-square"></i>Edite product</li>
+                        <li onClick={this.diplayUserInfo.bind(this)}><i class="fa-solid fa-users"></i>User's info</li>
+                        <li onClick={this.diplayAddNewProduct.bind(this)}><i class="fa-solid fa-plus"></i>New product</li>
+                        <li onClick={this.diplayPoductsList.bind(this)}><i class="fa-solid fa-pen-to-square"></i>Edite product</li>
                     </ul>
                 </nav>
                 <button className='Exite-btn'><i className="fa-solid fa-right-from-bracket"></i>Exite</button>
@@ -166,42 +195,213 @@ export default class DashBoard extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="edite-products">
-                    <ul className="poducts-list">
+                <div className="edit-products">
+                    <div className="poducts-list">
                         <div className='product'>
                             {/* <img src={productImg} alt={productName} /> */}
-                            <img src={XD2000} alt="rolleur xd 2000" />
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
                             <div className='product-details'>
-                                <p className='name'>My Product</p>
-                                <p className='price'>400$</p>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 1</p>
+                                    <p className='price'>400$</p>
+                                </div>
                                 <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
                                 tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
                                 vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
                             </div>
                         </div>
                         <div className='product'>
                             {/* <img src={productImg} alt={product-Name} /> */}
-                            <img src={XD2000} alt="rolleur xd 2000" />
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
                             <div className='product-details'>
-                                <p className='name'>My Product 2</p>
-                                <p className='price'>600$</p>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 2</p>
+                                    <p className='price'>600$</p>
+                                </div>
                                 <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
                                 tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
                                 vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
                             </div>
                         </div>
                         <div className='product'>
                             {/* <img src={productImg} alt={product-Name} /> */}
-                            <img src={XD2000} alt="rolleur xd 2000" />
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
                             <div className='product-details'>
-                                <p className='name'>My Product 3</p>
-                                <p className='price'>900$</p>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
                                 <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
                                 tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
                                 vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
                             </div>
                         </div>
-                    </ul>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='product'>
+                            {/* <img src={productImg} alt={product-Name} /> */}
+                            <img className='existing-product-image' src={XD2000} alt="rolleur xd 2000" />
+                            <div className='product-details'>
+                                <div className='name-price'>
+                                    <p className='name'>My Product 3</p>
+                                    <p className='price'>900$</p>
+                                </div>
+                                <p className='description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit mollitia quas fugit modi sequi dicta eligendi sint repellat deleniti,
+                                tenetur veritatis maiores ullam fugiat? Aspernatur debitis mollitia, ipsa atque consequuntur excepturi deserunt ullam cupiditate beatae. Accusantium hic asperiores
+                                vero!</p>
+                                <div className="interactive-btn">
+                                    <button className='interactive-btn-model delete-btn'>Delete</button>
+                                    <button className='interactive-btn-model edit-btn'>Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

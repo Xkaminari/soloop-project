@@ -100,8 +100,8 @@
 /* -----------------------------------------User Info----------------------------------------- */
 .all-users-info {
     display: flex;
+    /* display: none; */
     flex-direction: column;
-    display: none;
 }
 
 .AUser {
@@ -134,10 +134,11 @@
 /* ----------------------------------------Add Product---------------------------------------- */
 
 .add-new-product {
-    height: 100vh;
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 label {
@@ -233,6 +234,73 @@ textarea {
     border: 1px solid var(--black);
 }
 
-.edite-products {
+/* ----------------------------------------Edit Product---------------------------------------- */
+
+
+.poducts-list {
+    /* display: grid; */
     display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.existing-product-image {
+    width: 300px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-details {
+    margin: 0px 0px 0px 20px;
+}
+
+.name-price {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0px;
+}
+
+.product-details p {
+    color: var(--black);
+}
+
+.name {
+    font-family: 'Dosis', sans-serif ;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.price {
+    font-family: 'Dosis', sans-serif ;
+    font-weight: 900;
+    font-size: 1.2em;
+    margin: 0 20px 10px 0px;
+}
+
+.interactive-btn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 20px 0 10px 0;
+}
+
+.interactive-btn-model {
+    border: none;
+    color: var(--black);
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 16px;
+    transition: 0.5s ease;
+}
+
+.edit-btn:hover {
+    background-color: rgba(165, 255, 129, 0.541);
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 129, 129, 0.541);
 }
