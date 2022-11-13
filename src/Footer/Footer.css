@@ -35,7 +35,12 @@ footer {
     width: 200px;
 }
 
+.social-medias-links {
+    display: flex;
+}
+
 .social-medias-links a{
+    z-index: 3;
     color: var(--white);
     font-size: 3em;
     margin: 0 5px 0 5px;
@@ -64,6 +69,7 @@ a:hover{
 .contact a {
     display: block;
     transition: 0.5s ease;
+    z-index: 3;
 }
 
 .contact a:hover{

@@ -20,6 +20,7 @@
     width: 15vw;
     height: 100vh;
     background-color: #00000000;
+    color: var(--white);
 }
 
 .DashBoard-Soloop-Logo {
@@ -100,7 +101,6 @@
 /* -----------------------------------------User Info----------------------------------------- */
 .all-users-info {
     display: flex;
-    /* display: none; */
     flex-direction: column;
 }
 
@@ -134,14 +134,13 @@
 /* ----------------------------------------Add Product---------------------------------------- */
 
 .add-new-product {
-    /* display: flex; */
     display: none;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-label {
+.label-add-pruduct {
     color: var(--black);
 }
 
@@ -154,7 +153,7 @@ label {
     position: relative;
 }
 
-label[for="product-img"] {
+label[for="productImg"] {
     margin: 0 0 50px 90px;
     text-align: left;
     font-size: 2em;
@@ -181,6 +180,18 @@ input[type="file"]:hover {
     filter: blur(5px);
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+#productPrice{
+    -moz-appearance: textfield;
+}
+
 .hover-text {
     color: rgba(0, 0, 0, 0.507);
     position: absolute;
@@ -193,6 +204,33 @@ input[type="file"]:hover {
 
 input[type="file"]::-webkit-file-upload-button {
     display: none;
+}
+
+.errorMsg-Img {
+    font-size: 1.5em;
+    font-family: 'Julius Sans One', sans-serif;
+    margin: 30px 0 0 100px;
+}
+
+.add-product-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 1.5em;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 16px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 50px 70px 0 0 ;
+}
+
+.add-product-btn:hover {
+    background-color: rgba(78, 78, 78, 0.295);
+    cursor: pointer;
 }
 
 .Product-details-filds {

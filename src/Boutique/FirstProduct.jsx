@@ -4,6 +4,7 @@ import product1profile from '../Media/product1profile.jpg'
 import { Link } from "react-router-dom";
 import Popup from 'reactjs-popup';
 import "./FirstProduct.css"
+import Footer from '../Footer/Footer';
 
 export default class FirstProduct extends Component {
     render() {
@@ -25,7 +26,7 @@ export default class FirstProduct extends Component {
                     <p>$399,00</p>
                 </div>
                 <hr />
-                <Popup contentStyle={{width: "300px", border: '1px solid', borderRadius: '0px'}} trigger={<button>ADD TO SHOPPING BAG</button> } 
+                <Popup contentStyle={{width: "300px", border: '1px solid', borderRadius: '0px'}} trigger={<button className='popUp-btn'>ADD TO SHOPPING BAG</button> } 
                     position="left center">
                         <div><p className='pop-title'>Shopping Bag</p></div>
                         <hr></hr>
@@ -68,6 +69,7 @@ export default class FirstProduct extends Component {
                 </small>
             </section>
         </div>
+        <Footer baground="forProductPage"/>
         </>
     }
 }

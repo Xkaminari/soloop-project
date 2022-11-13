@@ -1,5 +1,4 @@
 -gradiant reponsive !!!
-_loging page
 _cart page
-_link to about section
-_footer ***************************
+
+_dashboard changer la photo du produit quand elle est selectionner dans New product

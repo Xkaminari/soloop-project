@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-around;
     background-color: #FAFAFA;
+    height: 75vh;
 }
 
 .prdct-img img {
@@ -38,10 +39,12 @@
     font-weight: 100;
     letter-spacing: 5px;
 }
+
 hr {
     width: 100%;
 }
-button {
+
+.popUp-btn {
     width: 100%;
     padding: 10px;
     border: none;
@@ -56,46 +59,56 @@ button {
     opacity: .8;
     
 }
+
 ul {
     list-style-type: none;
     margin-top: 30px;
 }
+
 .pop-flex {
     display: flex;
     padding: 20px 0;
 }
+
 .pop-title{
     font-family: 'Jost', sans-serif;
     font-size: 1.2em;
     text-align: center;
     opacity: .7;
 }
+
 .pop-img {
     width: 50px;
     padding-right: 10px;
 }
+
 .pop-name {
     font-family: 'Jost', sans-serif;
     opacity: .9;
 }
+
 .pop-price {
     font-family: 'Jost', sans-serif;
     opacity: .6;
 }
+
 .pop-available {
     font-family: 'Jost', sans-serif;
     opacity: .6;
 }
+
 .total {
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
+
 .total small {
     font-style: italic;
     font-size: .6em;
     margin-top: 5px;
 }
+
 .tot-price {
     font-size: 1.3em;
     font-family: 'Jost', sans-serif;
@@ -103,6 +116,9 @@ ul {
     opacity: .7;
 }
 
+.footer {
+    background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(221,175,96,1) 100%);
+}
 
 @media all and (max-width: 500px) {
     .flex {

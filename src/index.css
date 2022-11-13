@@ -10,8 +10,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  /* font-family: 'Julius Sans One', sans-serif; */
-  /* color: var(--white); */
 }
 
 body {
@@ -29,7 +27,7 @@ body {
 	width: 60px; 
 	height: 60px; 
   border-radius: 50%;
-  z-index: 3;
+  z-index: 1;
   background: #ffffff33;
 }
 

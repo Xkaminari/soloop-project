@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
+:root {
+    --black: #010001;
+    --white: #f5f5f5;
+    --gold: #DDAF60;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,41 +20,62 @@
     color: white;
 }
 .left-section {
-    width: 35vw;
-    padding: 120px 35px 0 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 50px;
+    width: 30vw;
+    padding: 0px 60px;
     color: white;
 }
+
+.return-btn {
+    color: var(--white);
+    font-size: 3em;
+    position: absolute;
+    top: 0px;
+    margin: 29px 0 0 0 ;
+    z-index: 2;
+}
+
 .main1 h4 {
     font-family: 'Jost', sans-serif;
-    margin-bottom: 15px;
     font-weight: 100;
 }
 .main1 h2 {
     font-family: 'Julius Sans One', sans-serif;
-    margin-bottom: 35px;
     font-size: 2em;
     font-weight: 100;
 }
 .main1 p {
     font-family: 'jost', sans-serif;
-    margin-bottom: 35px;
 }
 .right-section {
     background-image: url(../Media/ludivine-malle-about.jpg);
     height: 100vh;
     width: 100vw;
     background-size: cover;
+    position: relative;
 }
 
 .gradient-div1 {
     position: absolute;
     top: 0px;
-    left: 350px;
-    width: 50vw;
-    height: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     background: rgb(255,255,255);
-    background: linear-gradient(264deg, rgba(255,255,255,0) 5%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 5%, var(--black) 100%);
     z-index: 1;
+}
+
+.gradient-2 {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 5%, var(--black) 100%);
+
 }
 
 @media all and (max-width: 500px) {
