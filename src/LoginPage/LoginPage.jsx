@@ -11,6 +11,7 @@ export default class SignInPage extends Component {
             mail:'',
             password:'',
             error:'',
+            redirectionPath:'',
         }
         document.title = "ContactMe"
     }
@@ -21,6 +22,7 @@ export default class SignInPage extends Component {
             this.setState({
                 mail:'',
                 password:'',
+                redirectionPath:'/Boutique',
             });
         }).catch(err => this.setState({error: err.message}));
     }
@@ -49,6 +51,7 @@ export default class SignInPage extends Component {
             <button className="register_buttom" type="submit">Login</button>
             <p className='errorForm'>{this.state.error && <span>{this.state.error}</span>}</p>
         </form>
+        {this.state.redirectionPath && <Navigate to={this.state.redirectionPath}/>}
     </div>
     }
 }

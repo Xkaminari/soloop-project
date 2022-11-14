@@ -16,14 +16,12 @@ export default class Boutique extends Component {
                 <h2 className='boutique-title'>BOUTIQUE</h2>
                 <Link className='about-link' to="/Boutique/About">About Us</Link>
                 <Link className='about-link' id='DashBoard' to="/Boutique/DashBoard">DashBoard</Link>
-                <Link className='about-link' id='LoginPage' to="/Boutique/LoginPage">Login</Link>
-                <Link className='about-link' id='SignIn' to="/Boutique/SignIn">sign in</Link>
-            </div>
-            <section className='boutique-products'>
-                <div className="prod-items">
-                    <Products/>
+                <div className='conect-container'>
+                    <Link className='about-link' id='LoginPage' to="/Boutique/LoginPage">Login</Link>
+                    <Link className='about-link' id='SignIn' to="/Boutique/SignIn">sign in</Link>
                 </div>
-            </section>
+            </div>
+            <Products/>
             <Footer/>
         </div>
         </>

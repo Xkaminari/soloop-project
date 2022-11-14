@@ -13,6 +13,7 @@ export default class LoginPage extends Component {
             password:'',
             confirmedPassword:'',
             error:'',
+            redirectionPath:'',
         }
         document.title = "ContactMe"
     }
@@ -30,7 +31,9 @@ export default class LoginPage extends Component {
                     mail:'',
                     password:'',
                     confirmedPassword:'',
+                    redirectionPath:'/Boutique/LoginPage',
                 });
+                this.props.navigate.push("/Boutique/LoginPage")
             }).catch(err => this.setState({error: err.message}));
         }).catch(err => this.setState({error: err.message}));
     }
@@ -168,6 +171,7 @@ export default class LoginPage extends Component {
                 <button onClick={this.checkFormValidity.bind(this)} className="register_buttom" type="submit">Register</button>
                 <p className='errorForm'>{this.state.error && <span>{this.state.error}</span>}</p>
             </form>
+            {this.state.redirectionPath && <Navigate to={this.state.redirectionPath}/>}
         </div>
     }
 }
