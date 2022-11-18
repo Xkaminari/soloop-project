@@ -49,44 +49,86 @@
     z-index: 1;
 }
 
-.about-link {
+/* NAv Bar */
+
+.nav-bar {
+    height: 10vh;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-row: 1 / 1;
+    grid-column: 1 / 4;
+}
+
+.nav-link {
     font-family: 'Julius Sans One', sans-serif;
     text-align: right;
-    margin: 20px 50px 0 0;
-    font-size: 3em;
     color: white;
-    grid-row: 1 / 1;
-    grid-column: 3 / 3;
     z-index: 1;
+    font-size: 2em;
+}
+
+.about-link {
+    transition: 0.4s ease;
+    margin: 10px 0 0 30px;
+    padding: 20px;
 }
 
 #DashBoard {
-    display: none;
+    margin: 10px 0 0 0;
+    display: block;
     text-align: center;
-    margin-top: 20px;
-    font-size: 2em;
-    grid-row: 1 / 1;
-    grid-column: 2 / 2;
+    padding: 20px;
+}
+
+
+.nav-user-info-container {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+    margin: 20px 50px;
 }
 
 .conect-container {
-    font-size: 0.7em;
     z-index: 1;
     margin: 20px 50px;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
 }
 
-/* 
-#LoginPage {
-    grid-row: 3 / 3;
-    grid-column: 3 / 3;
+.nav-user-info-container span {
+    padding: 10px;
 }
 
-#SignIn {
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-} */
+.conect-container a {
+    padding: 20px;
+}
+
+#cart {
+    margin: 10px 0 0 0;
+    font-size: 1.3em;
+    color: var(--white);
+}
+
+#cart:hover {
+    color: rgba(0, 0, 0, 0.623);
+    cursor: pointer;
+}
+
+.lougout-btn {
+    font-family: 'Julius Sans One', sans-serif;
+    border: none;
+    background: none;
+    font-size: 2em;
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.lougout-btn:hover {
+    color: rgba(0, 0, 0, 0.623);
+    cursor: pointer;
+}
 
 .products-container {
     margin: 150px 70px 0 70px;
@@ -132,7 +174,132 @@
     font-family: 'Julius Sans One', sans-serif;
     font-weight: 600;
     font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.4s ease;
 }
+
+.addcart-btn:hover {
+    background-color: #3d3d3d67;
+    color: var(--white);
+}
+
+/* __________________Cart____________________ */
+
+.Cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 60px;
+}
+
+/* No item Case */
+.cart-no-item-case {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.No-item-msg {
+    font-family: 'Julius Sans One', sans-serif;
+    color: var(--white);
+    font-size: 1.2em;
+    margin: 0 0 60px;
+}
+
+.back-shop-btn {
+    font-family: 'Julius Sans One', sans-serif;
+    color: var(--white);
+    font-size: 1.2em;
+    text-decoration: underline;
+    transition: 0.4s ease;
+}
+
+.back-shop-btn:hover {
+    color: #464646a2;
+}
+/* ____________ */
+
+/* items in cart */
+.cart-card{
+    padding: 10px 0;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    border-bottom: 2px solid var(--white);
+    border-top: 2px solid var(--white);
+}
+
+.cart-item-details {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.8em;
+}
+
+.cart-price-orignal {
+    font-size: 1.2em;
+}
+
+.cart-img {
+    width: 300px;
+}
+
+.cart-delete-btn {
+    border: none;
+    background: none;
+    font-size: 2em;
+    color: var(--white);
+    margin-right: 50px;
+    transition: 0.4s ease;
+}
+
+.cart-delete-btn:hover {
+    color: #ff2d2d;
+}
+
+/* recape */
+.cart-summary-container {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-summary {
+    font-family: 'Julius Sans One', sans-serif;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+    width: 350px;
+    height: 350px;
+    border: 2px solid var(--white);
+}
+
+.cart-summary-price {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.Valid-purchase {
+    border: none;
+    background: var(--white);
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* _____________ */
+
+/* __________________________________________ */
+
 
 @media all and (max-width: 500px) {
     .boutique-title {

@@ -32,7 +32,7 @@ export default class FirstProduct extends Component {
                         <hr></hr>
                         <div className='pop-flex'>
                             <div>
-                                <img className='pop-img' src={product1profile}/>
+                                <img className='pop-img' src={product1profile} alt="image prod"/>
                             </div>
                             <div>
                             <small>

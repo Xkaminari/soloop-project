@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { auth, db } from '../config/config';
 import './SignInPage.css'
 import bgImgLoginPage from '../Media/Ludivine-Malle-Dancing.jpg'
-import { Navigate} from "react-router-dom";
+import { Link, Navigate} from "react-router-dom";
 
 export default class LoginPage extends Component {
     constructor(props){
@@ -146,7 +146,10 @@ export default class LoginPage extends Component {
     
     render() {
         return <div className='login-page-container'>
-            <img className='bgImgLoginPage' src={bgImgLoginPage} alt="Ludivine Malle performing rollers" />
+            <div className='login-page-imgbg-container'>
+                <img className='bgImgLoginPage' src={bgImgLoginPage} alt="Ludivine Malle performing rollers" />
+                <div className="gradient-div1 sign-in-gradient"></div>
+            </div>
             <form className='singIn-form' autoComplete='off' onSubmit={this.Signup.bind(this)}>
                 <div className="login-fild">
                     <label htmlFor="first_name">Full Name: *</label>
@@ -168,8 +171,11 @@ export default class LoginPage extends Component {
                     <input value={this.state.confirmedPassword} onChange={this.handleChage.bind(this)}  type="password" id="confirmedPassword"/>
                     <p className='errorConfirmPassword'></p>
                 </div>
-                <button onClick={this.checkFormValidity.bind(this)} className="register_buttom" type="submit">Register</button>
-                <p className='errorForm'>{this.state.error && <span>{this.state.error}</span>}</p>
+                <div className='footer-signIn-form'>
+                    <button onClick={this.checkFormValidity.bind(this)} className="register_buttom" type="submit">Register</button>
+                    <p className='connection-error'>{this.state.error && <span>A field was not filled in correctly</span>}</p>
+                    <Link className="signIn-btn-to-login" to="/Boutique/LoginPage">Already have an account ? Login !</Link>
+                </div>
             </form>
             {this.state.redirectionPath && <Navigate to={this.state.redirectionPath}/>}
         </div>

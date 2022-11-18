@@ -4,7 +4,6 @@ import homeBgVideo from '../Media/homeBgVideo.mp4'
 import SoloopLogo from '../Media/Soloop-Logo.png'
 import TeaserBoutiqueVideo from '../Media/TeaserBoutique.mp4'
 import TeaserBoutiqueVideoMobile from '../Media/soloopMainVideoMobilVS.mp4.mp4'
-import Boutique from '../Boutique/Boutique'
 import Footer from '../Footer/Footer'
 
 export default class Home extends Component {

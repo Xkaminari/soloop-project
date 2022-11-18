@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { auth, db } from '../config/config';
+import { auth } from '../config/config';
 import './SignInPage.css'
 import bgImgLoginPage from '../Media/Ludivine-Malle-Dancing.jpg'
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 export default class SignInPage extends Component {
     constructor(props){
@@ -36,8 +36,11 @@ export default class SignInPage extends Component {
     
     render() {
         return  <div className='login-page-container'>
-        <img className='bgImgLoginPage' src={bgImgLoginPage} alt="Ludivine Malle performing rollers" />
-        <form className='singIn-form' autoComplete='off' onSubmit={this.login.bind(this)}>
+        <div className="login-page-imgbg-container">
+            <img className='bgImgLoginPage' src={bgImgLoginPage} alt="Ludivine Malle performing rollers" />
+            <div className="gradient-div1 sign-in-gradient"></div>
+        </div>
+        <form className='singIn-form login-form' autoComplete='off' onSubmit={this.login.bind(this)}>
             <div class="login-fild">
                 <label htmlFor="email">Email: *</label>
                 <input value={this.state.mail} onChange={this.handleChage.bind(this)} type="email" id="mail" placeholder="exemple@gmail.com"/>
@@ -49,7 +52,8 @@ export default class SignInPage extends Component {
                 <p className='errorPassword'></p>
             </div>
             <button className="register_buttom" type="submit">Login</button>
-            <p className='errorForm'>{this.state.error && <span>{this.state.error}</span>}</p>
+            <Link className="login-btn-to-signIn" to="/Boutique/SignIn">don't have an account ?  create one !</Link>
+            <p>{this.state.error && <span className='connection-error'>Email or password incorect</span>}</p>
         </form>
         {this.state.redirectionPath && <Navigate to={this.state.redirectionPath}/>}
     </div>
