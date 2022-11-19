@@ -22,6 +22,7 @@ export default class NewProduct extends Component {
         super(props);
         this.productImg = React.createRef();
         this.state = {
+            bagroundImg: "http://localhost:3000/static/media/XD2000.d9036fd71abbddc96791.jpg",
             productName: '',
             productPrice: 0,
             productDescription:'',
@@ -30,8 +31,11 @@ export default class NewProduct extends Component {
     }
     
     productImgHandler(e) {
-        let selectiondFile = this.productImg.current.files[0];
+        let selectiondFile = URL.createObjectURL(this.productImg.current.files[0]);
         console.log(selectiondFile);
+        this.setState({
+            bagroundImg: selectiondFile,
+        })
     }
     
     handleChage(e) {
@@ -74,11 +78,18 @@ export default class NewProduct extends Component {
     }
     
     render() {
+        let theImgSelected = this.state.bagroundImg;
+        const inputFileImgBg = {
+            background: "url(" + theImgSelected + ")",
+            backgroundPosition: "center center",
+            backgroundSize: "80%",
+            backgroundRepeat: "no-repeat",
+        };
         return (
             <form className='add-new-product' onSubmit={this.addProduct.bind(this)}>
                 <div className='img-fild'>
                     <label className='label-add-pruduct'  htmlFor="productImg">Product Image</label>
-                    <input ref={this.productImg} onChange={this.productImgHandler.bind(this)} type="file" id="productImg" onMouseEnter={this.displayText.bind(this)} onMouseLeave={this.hideText.bind(this)} />
+                    <input style={inputFileImgBg} className='add-product-input' ref={this.productImg} onChange={this.productImgHandler.bind(this)} type="file" id="productImg" onMouseEnter={this.displayText.bind(this)} onMouseLeave={this.hideText.bind(this)} />
                     <p className='hover-text'>change image</p>
                     {/* {this.state.error&&<span className='errorMsg-Img'>{this.state.error}</span>} */}
                 </div>
@@ -86,15 +97,19 @@ export default class NewProduct extends Component {
                     <button className='add-product-btn'>Add</button>
                     <div className='fild'>
                         <label className='label-add-pruduct' htmlFor="productName">Product Name</label>
-                        <input value={this.state.productName} onChange={this.handleChage.bind(this)} type="text" id="productName"/>
+                        <input className='add-product-input' value={this.state.productName} onChange={this.handleChage.bind(this)} type="text" id="productName"/>
                     </div>
                     <div className='fild'>
                         <label className='label-add-pruduct' htmlFor="productPrice">Product Price</label>
-                        <input value={this.state.productPrice} onChange={this.handleChage.bind(this)} type="number" id="productPrice"/>
+                        <input className='add-product-input' value={() => {
+                            if (this.state.productPrice === 0) {
+                                
+                            }
+                        }} onChange={this.handleChage.bind(this)} type="number" id="productPrice"/>
                     </div>
                     <div className='fild'>
                         <label className='label-add-pruduct' htmlFor="productDescription">Product Description</label>
-                        <textarea value={this.state.productDescription} onChange={this.handleChage.bind(this)} id="productDescription" cols="30" rows="10" placeholder='Enter the description'></textarea>
+                        <textarea className='add-product-input' value={this.state.productDescription} onChange={this.handleChage.bind(this)} id="productDescription" cols="30" rows="10" placeholder='Enter the description'></textarea>
                     </div>
                 </div>
             </form>
