@@ -1,5 +1,3 @@
-_cart page
-_dashboard: _Accesibilité q'avec le compte admin
-            _changer la photo du produit quand elle est selectionner dans New product
+_dashboard: _changer la photo du produit quand elle est selectionner dans New product
             _link la database pour les produit
 _reponsive

@@ -77,7 +77,7 @@
 
 #DashBoard {
     margin: 10px 0 0 0;
-    display: block;
+    display: none;
     text-align: center;
     padding: 20px;
 }

@@ -100,7 +100,7 @@
 }
 /* -----------------------------------------User Info----------------------------------------- */
 .all-users-info {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -134,7 +134,7 @@
 /* ----------------------------------------Add Product---------------------------------------- */
 
 .add-new-product {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -160,16 +160,17 @@ label[for="productImg"] {
     font-weight: 500;
 }
 
+.add-product-input {
+    color: var(--black);
+    font-size: 1.5em;
+}
+
 input[type="file"] {
-    background: url(../Media/XD2000.jpg);
-    background-position: center;
-    background-size: 70%;
-    background-repeat: no-repeat;
+    background-size: 80%;
+    color: #00000000;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 70px;
-    display: flex;
     border: none;
-    content: "";
     width: 80%;
     height: 70%;
     margin: 0 auto;
@@ -183,13 +184,13 @@ input[type="file"]:hover {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    --webkit-appearance: none;
     margin: 0;
 }
 
 /* Firefox */
 #productPrice{
-    -moz-appearance: textfield;
+    --moz-appearance: textfield;
 }
 
 .hover-text {
@@ -266,7 +267,7 @@ textarea {
     resize: none;
     width: 570px;
     height: 70%;
-    padding: 15px;
+    padding: 20px;
     border-radius: 30px;
     outline: none;
     border: 1px solid var(--black);

@@ -45,7 +45,7 @@ export default class App extends Component {
             <Route path="/" element={<Home/>}/>
             <Route path="/Boutique" element={<Boutique user={this.state.user}/>}/>
             <Route path="/Boutique/FirstProduct" element={<FirstProduct/>}/>
-            <Route path="/Boutique/DashBoard" element={<DashBoard/>}/>
+            <Route path="/Boutique/DashBoard" element={<DashBoard user={this.state.user}/>}/>
             <Route path="/Boutique/About" element={<About/>}/>
             <Route path="/Boutique/LoginPage" element={<LoginPage/>}/>
             <Route path="/Boutique/SignIn" element={<SignInPage/>}/>

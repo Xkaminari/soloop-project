@@ -46,9 +46,9 @@ export default class DashBoard extends Component {
                 </div>
                 <nav>
                     <ul className='nav-list'>
-                        <li onClick={this.diplayUserInfo.bind(this)}><i className="fa-solid fa-users"></i>User's info</li>
+                        {/* <li onClick={this.diplayUserInfo.bind(this)}><i className="fa-solid fa-users"></i>User's info</li> */}
                         <li onClick={this.diplayAddNewProduct.bind(this)}><i className="fa-solid fa-plus"></i>New product</li>
-                        <li onClick={this.diplayPoductsList.bind(this)}><i className="fa-solid fa-pen-to-square"></i>Edite product</li>
+                        {/* <li onClick={this.diplayPoductsList.bind(this)}><i className="fa-solid fa-pen-to-square"></i>Edite product</li> */}
                     </ul>
                 </nav>
                 <button className='Exite-btn'><i className="fa-solid fa-right-from-bracket"></i>Exite</button>

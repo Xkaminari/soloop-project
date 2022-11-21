@@ -101,11 +101,7 @@ export default class NewProduct extends Component {
                     </div>
                     <div className='fild'>
                         <label className='label-add-pruduct' htmlFor="productPrice">Product Price</label>
-                        <input className='add-product-input' value={() => {
-                            if (this.state.productPrice === 0) {
-                                
-                            }
-                        }} onChange={this.handleChage.bind(this)} type="number" id="productPrice"/>
+                        <input className='add-product-input' value={this.state.productPrice} onChange={this.handleChage.bind(this)} type="number" id="productPrice"/>
                     </div>
                     <div className='fild'>
                         <label className='label-add-pruduct' htmlFor="productDescription">Product Description</label>

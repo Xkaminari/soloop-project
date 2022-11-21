@@ -7,7 +7,24 @@ export default class NavBar extends Component {
         super(props)
         this.state = {
             lougoutRedirection: "",
+            displayDashboard: false,
         }
+    }
+    
+    componentDidMount() {
+        let User = this.props.user;
+        auth.onAuthStateChanged(user => {
+            if (User === "Med yassine chahboun") {
+                this.setState({
+                    displayDashboard: true,
+                })
+            }
+            else {
+                this.setState({
+                    displayDashboard: false,
+                })
+            }
+        })
     }
     
     logout() {
@@ -22,7 +39,7 @@ export default class NavBar extends Component {
         return (
             <div className='nav-bar'>
                 <Link className='nav-link about-link' to="/Boutique/About">About Us</Link>
-                <Link className='nav-link' id='DashBoard' to="/Boutique/DashBoard">DashBoard</Link>
+                <Link className='nav-link' id='DashBoard' style={{display: this.state.displayDashboard ? 'block' : 'none'}} to="/Boutique/DashBoard">DashBoard</Link>
                 {/* no user connected */}
                 {!this.props.user && <div className='conect-container'>
                     <Link className='nav-link' id='LoginPage' to="/Boutique/LoginPage">Login</Link>
